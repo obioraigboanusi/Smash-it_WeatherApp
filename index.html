@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smash-It WeatherApp</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0020ff">
+  <meta name="msapplication-TileColor" content="#0020ff">
+
+</head>
+
+<body class="flex col j-between">
+  <header class="">
+    <nav class="container m-bottom-50 flex row j-between">
+      <div class="w-50"></div>
+      <div id="form" class="flex row m-row">
+        <input type="text" name="search-city" id="search-city" placeholder="Search a city e.g Lagos">
+        <button>Search</button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id="main" class="flex col j-center ali-center main">
+
+      <section class="flex col ali-center j-evenly w-90 m-bottom-50 bg icon-header">
+        <div>
+          <i id="weather-icon" class="icon">icon</i>
+        </div>
+        <p id="weather-summary">Description</p>
+        <div class="flex row ">
+          <P>Feels Like</P>
+          <span id="feels-like">43.5</span>
+        </div>
+      </section>
+      <section class="flex row j-between w-90 m-bottom-50">
+        <div class="flex col w-50">
+          <div class="t-center bg m-bottom-50">
+            <div id="city" class="flex row j-center ali-center"></div>
+            <p id="current-date">date</p>
+          </div>
+          <div class="bg flex row j-center ali-center">
+            <div class="flex col" style="padding: 10px; text-align: right;">
+              <p>pressure</p>
+              <p>wind</p>
+              <p>Wind Speed</p>
+              <p>Wind Degree</p>
+              <p>humidity</p>
+            </div>
+            <div class="flex col" style="border-left: 1px solid white; padding: 10px; text-align: r;">
+              <p id="Pressure">_</p>
+              <p id="wind-speed">_</p>
+              <p id="wind-degree">_</p>
+              <p id="humidity">_</p>
+            </div>
+          </div>
+        </div>
+        <div class="w-50 t-center bg flex col j-evenly ali-center">
+          <p id="weather-temp">43.5C</p>
+          <p id="min-max-temp">min/max</p>
+        </div>
+      </section>
+      <section class="m-bottom-50 w-90 analyse">
+        <h3>Event Analysis</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, vitae.</p>
+      </section>
+    </section>
+  </main>
+  <footer class="flex col ali-center w-100 j-center">
+    <small class="t-center">Built by Obiora</small>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
