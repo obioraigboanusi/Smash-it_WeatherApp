@@ -164,15 +164,15 @@ footer {
   margin-bottom: 0;
 }
 h1{
-  font-size: 3em;
+  font-size: 2.5em;
   color: #ffd700;
 }
 h2{
-  font-size: 3em;
+  font-size: 1.5em;
   /* color: gold; */
 }
 span{
-  margin-left: 1em;
+  margin-left: 0.5em;
   text-align: center;
   vertical-align: middle;
 }
@@ -195,5 +195,11 @@ span{
   }
   input[type='submit'] {
     margin-right: 5px;
+  }
+  h1{
+    font-size: 3em;
+  }
+  h2{
+    font-size: 2em;
   }
 }
