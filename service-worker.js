@@ -1,4 +1,4 @@
-const cacheName = "Smash-it-weathers-2";
+const cacheName = "Smash-it-weathers-05";
 const files = [
   "/",
   "/index.html",
