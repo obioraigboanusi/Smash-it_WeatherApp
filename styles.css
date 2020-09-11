@@ -15,6 +15,10 @@ body {
   font-weight: normal;
   font-family: sans-serif;
 }
+img{
+  width: 60px;
+  height: auto;
+}
 
 .m-bottom-50 {
   margin-bottom: 15px;
@@ -101,28 +105,79 @@ button:active {
 
 nav {
   background-color: #fff0ff2a;
-  height: 10vh;
+  min-height: 10vh;
   align-items: center;
 }
-
-.analyse, .bg {
-  background-color: #363f54dc;
+.border-n-p{
   padding: 10px;
   border-radius: 10px;
 }
 
+.bg {
+  background-color: #363f54dc;
+}
+.bg-blue{
+  background-color: rgb(1, 1, 151);
+}
+.bg-pink{
+  background-color:  rgb(57, 0, 150);
+}
+.bg-yellow{
+  background-color: rgb(228, 228, 2);
+  color:rgb(57, 0, 150);
+}
+.bg-another{
+  background-color: rgb(0, 181, 253);
+  color: rgb(1, 1, 151);
+}
+
 .icon-header {
-  height: 100px;
+  height: auto;
+}
+.container-section{
+  min-height: 60vh;
 }
 
 .main {
-  height: 75vh;
+  height: auto;
 }
-
+table, th, td {
+  border-collapse: collapse;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid rgb(175, 172, 172);
+  width: auto;
+  text-transform: capitalize;
+}
+.table-div{
+  margin:20px 0 20px 0;
+}
+table {
+  width: 100%;
+  max-width: 500px;
+  
+}
 footer {
-  height: 10vh;
+  min-height: 10vh;
   background-color: rgb(57, 0, 150);
   margin-bottom: 0;
+}
+h1{
+  font-size: 3em;
+  color: #ffd700;
+}
+h2{
+  font-size: 3em;
+  /* color: gold; */
+}
+span{
+  margin-left: 1em;
+  text-align: center;
+  vertical-align: middle;
+}
+.t-capitalise{
+  text-transform: capitalize;
 }
 
 @media screen and (min-width:746px) {

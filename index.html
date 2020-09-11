@@ -14,7 +14,6 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0020ff">
   <meta name="msapplication-TileColor" content="#0020ff">
-
 </head>
 
 <body class="flex col j-between">
@@ -28,52 +27,61 @@
     </nav>
   </header>
   <main>
-    <section id="main" class="flex col j-center ali-center main">
-
-      <section class="flex col ali-center j-evenly w-90 m-bottom-50 bg icon-header">
-        <div>
-          <i id="weather-icon" class="icon">
-            
-          </i>
-          <img src="./icons/app_icon.png" alt="weather icon">
-        </div>
-        <p id="weather-summary">Description</p>
-        <div class="flex row ">
-          <P>Feels Like</P>
-          <span id="feels-like">43.5</span>
-        </div>
-      </section>
-      <section class="flex row j-between w-90 m-bottom-50">
-        <div class="flex col w-50">
-          <div class="t-center bg m-bottom-50">
-            <div id="city" class="flex row j-center ali-center"></div>
-            <p id="current-date">date</p>
+    <section class="container-section flex col j-evenly">
+      <div>
+      <h1 class="t-center">Smash-it WeatherApp</h1>
+      </div>
+      <div id="main" class="flex col j-center main w-90">
+        <section class="flex col ali-center j-evenly w-90 m-bottom-50 bg-blue border-n-p icon-header">
+          <div>
+            <!-- <canvas id="icons" width="128" height="128"></canvas> -->
+            <img src="./icons/app_icon.png" alt="weather icon">
           </div>
-          <div class="bg flex row j-center ali-center">
-            <div class="flex col" style="padding: 10px; text-align: right;">
-              <p>pressure</p>
-              <p>wind</p>
-              <p>Wind Speed</p>
-              <p>Wind Degree</p>
-              <p>humidity</p>
+          <p id="weather-summary" class="t-capitalise">Description</p>
+          <div class="flex row ">
+            <P>Feels Like</P>
+            <span id="feels-like">43.5</span>
+          </div>
+        </section>
+        <section class="flex col j-evenly w-90 m-bottom-50">
+          <div class="flex row j-between ali-center">
+            <div class="flex col w-50">
+              <div class="t-center bg-another border-n-p m-bottom-50">
+                <div id="city" class="flex row j-center ali-center"></div>
+                <p id="current-date">date</p>
+              </div>
             </div>
-            <div class="flex col" style="border-left: 1px solid white; padding: 10px; text-align: r;">
-              <p id="Pressure">_</p>
-              <p id="wind-speed">_</p>
-              <p id="wind-degree">_</p>
-              <p id="humidity">_</p>
+            <div class="w-50 t-center bg-another flex col j-evenly ali-center border-n-p">
+              <h2 id="weather-temp">temperature</h2>
+              <p id="min-max-temp">min/max</p>
             </div>
           </div>
-        </div>
-        <div class="w-50 t-center bg flex col j-evenly ali-center">
-          <p id="weather-temp">43.5C</p>
-          <p id="min-max-temp">min/max</p>
-        </div>
-      </section>
-      <section class="m-bottom-50 w-90 analyse">
-        <h3>Event Analysis</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, vitae.</p>
-      </section>
+          <div class="bg-pink border-n-p flex row j-center ali-center table-div">
+            <table>
+              <thead>
+                <tr>
+                  <th>pressure</th>
+                  <th>Wind Speed</th>
+                  <th>Wind Degree</th>
+                  <th>humidity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="Pressure"></td>
+                  <td id="wind-speed"></td>
+                  <td id="wind-degree"></td>
+                  <td id="humidity"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </div>
+    </section>
+    </section>
+    <section class="m-bottom-50 w-90 bg-yellow border-n-p">
+      <h3>Event Analysis</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, vitae.</p>
     </section>
   </main>
   <footer class="flex col ali-center w-100 j-center">

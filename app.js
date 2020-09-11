@@ -26,19 +26,21 @@ window.addEventListener('DOMContentLoaded', () => {
           return response.json()
         })
         .then(data => {
+          console.log(data)
           const { temp, temp_min, temp_max, feels_like, pressure, humidity } = data.main;
-          const { description, icon } = data.weather[0];
+          const { description} = data.weather[0];
           const { speed, deg } = data.wind
 
-          displayCity.innerHTML = `<h1>${data.name}</h1> ,<p>${data.sys.country}</p>`;
-          weatherTemp.textContent = `${temp}°F`;
-          minMaxTemp.textContent = `${temp_min}°F / ${temp_max}°F`;
+          displayCity.innerHTML = `<h2>${data.name}</h2> ,<span>${data.sys.country}</span>`;
+          weatherTemp.textContent = toCelcuis(temp) ;
+          minMaxTemp.textContent = `${toCelcuis(temp_min)} / ${toCelcuis(temp_max)}`;
           weatherSummary.textContent = description;
-          feelsLike.textContent = feels_like;
+          feelsLike.textContent = toCelcuis(feels_like);
           displayPressure.textContent = pressure;
           wind_speed.textContent = speed;
           wind_degree.textContent = deg;
           displayHumidity.textContent = humidity;
+          // setIcons(description, document.querySelector("#icons"));
           clock();
           main.style.display = 'flex';
         })
@@ -68,6 +70,17 @@ window.addEventListener('DOMContentLoaded', () => {
       // const displayDate = document.querySelector('#current-time');
       //   displayDate.innerText = hours + ':' + minutes + meridian + ',';
     }
+    function toCelcuis(ez) {
+      // let celcius = (ez - 32) * (5 / 9);
+      return ez + '°F';
+    }
+    function displayIcon(icon, iconID) {
+      const skycons = new Skycons({ color: "white" });
+      const currentIcon = description.replace(/""/g, "_").toUpperCase();
+      skycons.play();
+      return skycons.set(iconID, Skycons[currentIcon]);
+    }
+
     function hourCalc(el) {
       el = (el == 0) ? (el = 12) : el;
       el = (el > 12) ? (el - 12) : el;
